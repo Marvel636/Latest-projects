@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surpy Naturals – Premium Organic Hair Care</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- <script type="https://js.coinbase.com/v3/"></script> -->
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-mark">
+          <img src="assets/logo.jpg" alt="surpy naturals logo" />
+        </div>
+        <span class="nav-logo-text">SURPY NATURALS</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">Faq</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping Cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home" onclick="closeMobileNav()">Home</a>
+      <a href="#shop" onclick="closeMobileNav()">Shop</a>
+      <a href="#about" onclick="closeMobileNav()">About</a>
+      <a href="#faq" onclick="closeMobileNav()">Faq</a>
+      <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+      <!-- Background Image -->
+      <img src="assets/image.jpg" alt="" class="hero-bg-img" />
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-label fade-up">Premium Nigerian Hair Care</div>
+          <h1 class="hero-title fade-up">
+            Experience<br />
+            <em id="rotating-word">Hair Perfection</em>
+          </h1>
+          <p class="hero-sub fade-up">
+            Organic Growth. Visible Results. Crafted from the finest natural
+            botanicals for hair that commands attention.
+          </p>
+          <a href="#shop" class="hero-cta fade-up">
+            <span>Explore Collection</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar">
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <span class="trust-num" data-target="2000">0</span
+          ><span class="trust-num-plus">+</span>
+          <span class="trust-label">Happy Customers</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 2C8 2 5 6 5 10c0 5 7 12 7 12s7-7 7-12c0-4-3-8-7-8z"
+              />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+          </span>
+          <span class="trust-label">100% Natural Ingredients</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.5H2M2 16.5l3-9h14l3 9M2 16.5l1.5 3h17l1.5-3M9 7.5V4M15 7.5V4M6 12h12"
+              />
+            </svg>
+          </span>
+          <span class="trust-label">Ships Worldwide</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-num" data-target="98">0</span
+          ><span class="trust-num-plus">%</span>
+          <span class="trust-label">Would Recommend</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features section">
+      <div class="section-header fade-up">
+        <div class="section-label">Why Surpy Naturals</div>
+        <h2 class="section-title">Crafted for Excellence</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon">
+            <div class="scroll-animate">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-8V7h2v5h4v2H9v-4h2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="feature-title">100% Organic Ingredients</div>
+          <p class="feature-desc">
+            Sourced from certified Nigerian botanical farms, our ingredients are
+            pure, potent, and ethically obtained.
+          </p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon">
+            <div class="scroll-animate pulse-icon">
+              <svg viewBox="0 0 24 24" class="emoji-icon">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+          </div>
+          <div class="feature-title">Clinically Formulated</div>
+          <p class="feature-desc">
+            Each product is carefully developed by hair growth specialists for
+            maximum efficacy and safety.
+          </p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon">
+            <div class="scroll-animate">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="feature-title">Cruelty Free</div>
+          <p class="feature-desc">
+            Never tested on animals. Always crafted with love, respect, and a
+            commitment to ethical beauty.
+          </p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon">
+            <div class="scroll-animate">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+          </div>
+          <div class="feature-title">Proven Results</div>
+          <p class="feature-desc">
+            Visible hair growth stimulation within weeks. Backed by thousands of
+            satisfied customers across Nigeria and beyond.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+
+    <section class="shop section" id="shop">
+      <div class="section-header fade-up">
+        <div class="section-label">Our Collection</div>
+        <h2 class="section-title">Premium Hair Care</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+
+    <section class="testimonials section">
+      <div class="section-header fade-up">
+        <div class="section-label">Customer Love</div>
+        <h2 class="section-title">Real Results. Real People.</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            My hair has never been this full and healthy. The growth oil is
+            absolutely phenomenal — I started seeing results within 3 weeks.
+          </p>
+          <div class="testimonial-author">— Adaeze N., Lagos</div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            I've tried so many products. Surpy Naturals is on a different level.
+            Pure luxury, pure quality. Worth every kobo.
+          </p>
+          <div class="testimonial-author">— Chioma O., Abuja</div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            Ordered from the US, delivered fast, and the quality exceeded
+            expectations. The hair cream is my absolute holy grail.
+          </p>
+          <div class="testimonial-author">— Funmilayo A., Houston</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="section" id="about" style="background: var(--charcoal)">
+      <div class="about-grid">
+        <div class="about-visual fade-up">
+          <div class="about-slider">
+            <div class="about-track">
+              <img
+                src="assets/PHOTO-2026-01-03-01-17-55.jpg"
+                alt="About Image 1"
+              />
+              <img src="assets/logo.jpg" alt="About Image 2" />
+              <img src="assets/Nigeria_flag_map.png" alt="About Image 3" />
+              <img src="assets/about3.jpg" alt="About Image 3" />
+            </div>
+          </div>
+        </div>
+        <div class="fade-up">
+          <div class="about-label">Our Story</div>
+          <h2 class="about-title">
+            Born in Nigeria.<br />Built for the World.
+          </h2>
+          <p class="about-text">
+            Surpy Naturals was founded on a simple belief: African soil grows
+            the most powerful botanical ingredients in the world. We harness
+            that power through meticulous formulation, turning ancient hair care
+            wisdom into modern luxury products.
+          </p>
+          <p class="about-text">
+            Every product is handcrafted in small batches, quality-tested, and
+            designed to deliver results that speak louder than marketing. We
+            believe in transparency, quality, and results you can see.
+          </p>
+          <a
+            href="#shop"
+            class="hero-cta"
+            style="display: inline-flex; margin-top: 8px"
+          >
+            <span>Shop Now</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section section" id="faq">
+      <div class="section-header fade-up">
+        <div class="section-label">Got Questions?</div>
+        <h2 class="section-title">Frequently Asked</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item fade-up">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does it work on relaxed or chemically treated hair?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes. Our products are formulated to work on all hair types —
+              natural, relaxed, texlaxed, and colour-treated. The botanical
+              ingredients nourish and strengthen the hair shaft regardless of
+              chemical history.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long before I see results?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Most customers notice reduced breakage and increased softness
+              within 2–3 weeks. Visible length retention and growth typically
+              shows within 4–8 weeks of consistent use. Results vary by hair
+              type and frequency of application.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you ship internationally?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes — we ship across Nigeria and internationally including the UK,
+              US, Canada, and Europe. International orders are priced in USD at
+              checkout. Delivery timelines vary by location (3–7 days Nigeria,
+              7–14 days international).
+            </p>
+          </div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How often should I use the products?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              The Hair Growth Oil should be applied 3–4 times per week directly
+              to the scalp. The Cream works best daily or every other day on the
+              hair shaft and ends. The Shampoo is recommended once or twice a
+              week.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Are the ingredients safe for children?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Our products are made from 100% natural botanicals with no harsh
+              chemicals, making them gentle enough for children aged 3 and
+              above. We always recommend a patch test before first use on
+              sensitive scalps.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is your return policy?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              If you're not satisfied, contact us within 7 days of receiving
+              your order via WhatsApp or email. We'll work with you on a
+              replacement or refund. Opened products are assessed case by case —
+              your satisfaction is our priority.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+
+    <footer class="footer" id="contact">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <div class="nav-logo-mark">
+              <img src="assets/logo.jpg" alt="logo" />
+            </div>
+            <span class="footerspan">SURPY NATURALS</span>
+          </div>
+          <p>
+            Premium organic hair growth solutions rooted in Nigerian botanical
+            heritage. Real ingredients. Real results. Real luxury.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Support</div>
+          <ul class="footer-links">
+            <li>
+              <a href="https://wa.me/2348027406549" target="_blank"
+                >WhatsApp Us</a
+              >
+            </li>
+            <li><a href="mailto:surpynaturals@gmail.com">Email Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Follow Us</div>
+          <div
+            class="social-links"
+            style="flex-direction: column; gap: 10px; align-items: flex-start"
+          >
+            <a
+              href="https://www.instagram.com/surpynaturals?igsh=ZnpqN3RnbXh1d3Z6"
+              style="
+                width: auto;
+                padding: 0 12px;
+                font-size: 13px;
+                letter-spacing: 1px;
+                height: 36px;
+              "
+              >Instagram</a
+            >
+            <a
+              href="https://www.tiktok.com/@surpynaturals?_r=1&_t=ZS-96PpaFg7gUW"
+              style="
+                width: auto;
+                padding: 0 12px;
+                font-size: 13px;
+                letter-spacing: 1px;
+                height: 36px;
+              "
+              >TikTok</a
+            >
+            <a
+              href="https://x.com/surpynaturals?s=21"
+              style="
+                width: auto;
+                padding: 0 12px;
+                font-size: 13px;
+                letter-spacing: 1px;
+                height: 36px;
+              "
+              >Twitter/X</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Surpy Naturals. All rights reserved.</span>
+        <span>Premium Organic Hair Care Made in Nigeria 🇳🇬</span>
+      </div>
+    </footer>
+    <!-- CRYPTO PAYMENT MODAL -->
+    <div
+      class="crypto-overlay"
+      id="cryptoOverlay"
+      onclick="closeCryptoModal()"
+    ></div>
+    <div class="crypto-modal" id="cryptoModal">
+      <div class="crypto-modal-header">
+        <div class="crypto-modal-title">Pay with Crypto</div>
+        <button class="crypto-close" onclick="closeCryptoModal()">×</button>
+      </div>
+      <p class="crypto-note">
+        Send the exact USD equivalent to any wallet below, then upload your
+        transaction receipt. Your order will be confirmed once verified.
+      </p>
+
+      <div class="wallet-list">
+        <div class="wallet-item">
+          <div class="wallet-label">USDT (BEP20)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDT (SOL)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            CwYRX4N5fdJn9ZbB3mn3Jj5AiGpCrjJYXGqni2ngbMrs<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDT (TON)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            UQBV-yQDSeFrXbQr2bKLpGD6Q6KFNBFcNQNGkbGdwihoWi1N<span
+              class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDT (ERC20)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">ETHEREUM (Base)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">ETHEREUM (ETH)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">BNB</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">TON</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            UQBV-yQDSeFrXbQr2bKLpGD6Q6KFNBFcNQNGkbGdwihoWi1N<span
+              class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">SOL</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            CwYRX4N5fdJn9ZbB3mn3Jj5AiGpCrjJYXGqni2ngbMrs<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDC (BEP20)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDC (SOL)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            CwYRX4N5fdJn9ZbB3mn3Jj5AiGpCrjJYXGqni2ngbMrs<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDC (ERC20)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+        <div class="wallet-item">
+          <div class="wallet-label">USDC (Base)</div>
+          <div class="wallet-addr" onclick="copyAddress(this)">
+            0x8D48a7F2cC689B043033DC4071e5e32458e73D4c<span class="copy-hint"
+              >tap to copy</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="receipt-upload-area">
+        <label class="receipt-label">Upload Transaction Receipt</label>
+        <div
+          class="receipt-drop"
+          id="receiptDrop"
+          onclick="document.getElementById('receiptFile').click()"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"
+            />
+          </svg>
+          <span id="receiptFileName">Tap to upload image or PDF</span>
+        </div>
+        <input
+          type="file"
+          id="receiptFile"
+          accept="image/*,.pdf"
+          style="display: none"
+          onchange="handleReceiptUpload(this)"
+        />
+      </div>
+
+      <button
+        class="btn-pay"
+        onclick="submitCryptoOrder()"
+        style="margin-top: 8px"
+      >
+        Confirm Payment
+      </button>
+    </div>
+    <!-- WHATSAPP FAB -->
+
+    <a
+      href="https://wa.me/2348027406549?text=Hi%2C%20I%20need%20help%20with%20my%20Surpy%20Naturals%20order"
+      class="wa-fab"
+      target="_blank"
+      aria-label="WhatsApp Support"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <!-- CART OVERLAY -->
+
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+    <!-- CART SIDEBAR -->
+
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <div class="cart-title">Your Cart</div>
+        <button class="cart-close" onclick="closeCart()">×</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty" id="cartEmpty">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+          </svg>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-line">
+          <span>Subtotal</span><span id="cartSubtotal">₦0</span>
+        </div>
+        <div class="cart-line">
+          <span>Shipping</span><span id="cartShipping">₦3,000</span>
+        </div>
+        <div class="cart-total-line">
+          <span>Total</span><span id="cartTotal">₦0</span>
+        </div>
+        <button class="btn-checkout" onclick="openCheckout()">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+
+    <div class="modal-overlay" id="quickViewModal">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeQuickView()">×</button>
+        <div class="modal-inner">
+          <div class="modal-img" id="modalImg">
+            <img src="assets/products/hair oil.jpg" alt="hair oil" />
+          </div>
+          <div class="modal-content">
+            <div class="modal-tag" id="modalTag">Hair Care</div>
+            <h2 class="modal-name" id="modalName">Product Name</h2>
+            <p class="modal-desc" id="modalDesc">
+              Stimulates hair growth & strengthens roots with potent organic
+              botanicals. Formulated for all hair types.
+            </p>
+            <div class="modal-sizes">
+              <div class="modal-sizes-label">Select Size</div>
+              <div class="size-options" id="sizeOptions"></div>
+            </div>
+            <div class="modal-price">
+              <span class="modal-price-ngn" id="modalPriceNgn">₦0</span>
+              <span class="modal-price-usd" id="modalPriceUsd">$0</span>
+            </div>
+            <button
+              class="btn-add-modal"
+              id="modalAddBtn"
+              onclick="addFromModal()"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+
+    <div class="checkout-overlay" id="checkoutOverlay">
+      <div class="checkout-box">
+        <button class="checkout-close" onclick="closeCheckout()">×</button>
+        <h2 class="checkout-title">Checkout</h2>
+        <p class="checkout-sub">Secure guest checkout — no account required</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-input"
+              id="fullName"
+              placeholder="Your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-input"
+              id="emailAddr"
+              placeholder="your@email.com"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input
+            type="tel"
+            class="form-input"
+            id="phoneNum"
+            placeholder="+234 800 000 0000"
+          />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Delivery Address</label>
+          <input
+            type="text"
+            class="form-input"
+            id="address"
+            placeholder="Street address"
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input
+              type="text"
+              class="form-input"
+              id="city"
+              placeholder="City"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Country</label>
+            <select class="form-input form-select" id="country">
+              <option value="NG">🇳🇬 Nigeria</option>
+              <option value="US">🇺🇸 United States</option>
+              <option value="GB">🇬🇧 United Kingdom</option>
+              <option value="CA">🇨🇦 Canada</option>
+              <option value="AU">🇦🇺 Australia</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-bottom: 24px">
+          <div
+            class="modal-sizes-label"
+            style="
+              font-size: 11px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: var(--grey);
+              margin-bottom: 14px;
+            "
+          >
+            Payment Method
+          </div>
+          <div class="payment-methods">
+            <div
+              class="pay-method selected"
+              onclick="selectPayment(this,'paystack')"
+            >
+              <input type="radio" name="payMethod" checked />
+              <span class="pay-method-flag">🇳🇬</span>
+              <span class="pay-method-label"
+                >Paystack — Cards, Bank Transfer, USSD (₦)</span
+              >
+            </div>
+            <div class="pay-method" onclick="selectPayment(this,'crypto')">
+              <input type="radio" name="payMethod" />
+              <span class="pay-method-flag">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="width: 16px; height: 16px; vertical-align: middle"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M9.5 8.5h3.75a2 2 0 010 4H9.5m3.75 0H9.5m3.75 0a2 2 0 010 4H9.5M12 6v2M12 16v2"
+                  />
+                </svg>
+              </span>
+              <span class="pay-method-label"
+                >Crypto — USDT, ETH, BNB, SOL, TON ($)</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            background: rgba(18, 183, 106, 0.06);
+            border: 1px solid rgba(18, 183, 106, 0.15);
+            padding: 14px 18px;
+            margin-bottom: 24px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              font-size: 13px;
+              color: var(--grey);
+            "
+          >
+            <span>Order Total</span>
+            <span id="checkoutTotal" style="color: var(--glow); font-size: 16px"
+              >₦0</span
+            >
+          </div>
+        </div>
+        <button class="btn-pay" id="payBtn" onclick="processPayment()">
+          Pay Now – Secure Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-box">
+        <div class="success-icon">✓</div>
+        <h2 class="success-title">Order Confirmed!</h2>
+        <p class="success-text">
+          Thank you for your purchase. Your order has been received and is being
+          processed.
+        </p>
+        <div class="success-order">
+          Order #<span id="orderNumber">SN-000000</span>
+        </div>
+        <a
+          href="https://wa.me/2348027406549"
+          class="btn-whatsapp"
+          target="_blank"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
+          </svg>
+          Chat with Support on WhatsApp
+        </a>
+        <button
+          onclick="closeSuccess()"
+          style="
+            display: block;
+            width: 100%;
+            margin-top: 16px;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--grey);
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: all 0.2s;
+          "
+          onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'"
+        >
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <div id="toast-container"></div>
+  </body>
+</html>
